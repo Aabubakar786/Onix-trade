@@ -44,9 +44,9 @@ const ScrappersList: React.FC = () => {
 
   return (
     <CustomCard
-      title='Scrappers List'
-      subtitle={`Over ${numberFormatter.format(scrapperFilters.total || 0)} items`}
-      totalHover={JSON.stringify(scrapperFilters.total)}
+      title='Exchanges'
+      subtitle={`Excahnges that are top in trading`}
+      // totalHover={JSON.stringify(scrapperFilters.total)}
       headerClassName='border-0 pt-5'
       toolbar={
         <span className='d-flex align-items-stretch'>
@@ -67,14 +67,12 @@ const ScrappersList: React.FC = () => {
           {/* begin::Table head */}
           <thead>
             <tr className='fw-bolder text-muted'>
-              <th className='w-200px '>Scrapper Name</th>
-              <th className='w-200px min-w-50px text-center'>Total Products</th>
+              <th className='w-200px '>Exhange Name</th>
+              <th className='w-200px min-w-50px text-center'>Total currencies</th>
               <th className='min-w-120px '>Description</th>
               <th className='min-w-100px text-end pe-10'>Actions</th>
             </tr>
           </thead>
-          {/* end::Table head */}
-          {/* begin::Table body */}
           <tbody>
             {loading ? (
               <ProductTableSkeleton columns={4} />

@@ -67,67 +67,11 @@ const PrivateRoutes = () => {
         <Route path='scrappers/edit/:id' element={<ScrappersWrapper element={<ScrappersCreate />} />} />
         <Route path='scrappers/:id' element={<ScrappersWrapper element={<ScrappersView />} />} />
 
-        {/* <Route path='users' element={<MenuTestPage />} />
-        <Route path='scrappers' element={<MenuTestPage />} />
-        <Route path='channels' element={<MenuTestPage />} /> */}
-        {/*/!* Lazy Modules *!/*/}
-        {/*<Route*/}
-        {/*  path='users'*/}
-        {/*  element={*/}
-        {/*    <SuspensedView>*/}
-        {/*      <ProfilePage />*/}
-        {/*    </SuspensedView>*/}
-        {/*  }*/}
-        {/*/>*/}
-        {/*<Route*/}
-        {/*  path='scrappers'*/}
-        {/*  element={*/}
-        {/*    <SuspensedView>*/}
-        {/*      <WizardsPage />*/}
-        {/*    </SuspensedView>*/}
-        {/*  }*/}
-        {/*/>*/}
-        {/*<Route*/}
-        {/*  path='channels'*/}
-        {/*  element={*/}
-        {/*    <SuspensedView>*/}
-        {/*      <WidgetsPage />*/}
-        {/*    </SuspensedView>*/}
-        {/*  }*/}
-        {/*/>*/}
-        {/*<Route*/}
-        {/*  path='crafted/account/*'*/}
-        {/*  element={*/}
-        {/*    <SuspensedView>*/}
-        {/*      <AccountPage />*/}
-        {/*    </SuspensedView>*/}
-        {/*  }*/}
-        {/*/>*/}
-        {/*<Route*/}
-        {/*  path='apps/chat/*'*/}
-        {/*  element={*/}
-        {/*    <SuspensedView>*/}
-        {/*      <ChatPage />*/}
-        {/*    </SuspensedView>*/}
-        {/*  }*/}
-        {/*/>*/}
-        {/* Page Not Found */}
         <Route path='*' element={<Navigate to='/error/404' />} />
       </Route>
     </Routes>
   )
 }
 
-// const SuspensedView: FC = ({children}) => {
-//   const baseColor = getCSSVariableValue('--bs-primary')
-//   TopBarProgress.config({
-//     barColors: {
-//       '0': baseColor,
-//     },
-//     barThickness: 1,
-//     shadowBlur: 5,
-//   })
-//   return <Suspense fallback={<TopBarProgress />}>{children}</Suspense>
-// }
 
 export {PrivateRoutes}

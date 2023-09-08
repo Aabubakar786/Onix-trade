@@ -14,10 +14,10 @@ const ScrappersWrapper: FC<Props> = ({element}) => {
       <PageTitle
         breadcrumbs={[]}
         showAddButton
-        addButtonText={location.pathname?.split("/")?.length !== 2 ? "" : 'New Scrapper'}
+        addButtonText={location.pathname?.split("/")?.length !== 2 ? "" : 'New Exchange'}
         addButtonURL='/scrappers/add'
       >
-        Scrappers
+       Trading Excahnges
       </PageTitle>
       <div className='row gy-5 gx-xl-8'>
         <div className='col-12 '>{element}</div>

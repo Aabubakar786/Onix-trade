@@ -262,9 +262,9 @@ const CategoriesList: React.FC = () => {
   return (
     <>
       <CustomCard
-        title='Categories List'
-        subtitle={`Over ${numberFormatter.format(categoryFilters.total || 0)} items`}
-        totalHover={JSON.stringify(categoryFilters.total)}
+        title='Live and Historical Tradings'
+        subtitle={`Over 2 Trading views available`}
+        // totalHover={JSON.stringify(categoryFilters.total)}
         headerClassName='border-0 pt-5'
         toolbar={<span className='d-flex align-items-stretch'>
           <div className={clsx('d-flex align-items-stretch h-35px')}>

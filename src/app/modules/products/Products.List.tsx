@@ -56,9 +56,9 @@ const ProductsList: React.FC = () => {
 
   return (
     <CustomCard
-      title='Product List'
-      subtitle={`Over ${numberFormatter.format(filters.total || 0)} items`}
-      totalHover={JSON.stringify(filters.total?.toLocaleString())}
+      title='Dashbaord'
+      // subtitle={`Over ${numberFormatter.format(filters.total || 0)} items`}
+      // totalHover={JSON.stringify(filters.total?.toLocaleString())}
       headerClassName='border-0 pt-5'
       toolbar={
         <span className='d-flex align-items-stretch'>
@@ -72,11 +72,11 @@ const ProductsList: React.FC = () => {
         </span>
       }
     >
-      {/* begin::Table container */}
-      <div className='table-responsive'>
-        {/* begin::Table */}
+    
+      {/* <div className='table-responsive'>
+     
         <table className='table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4'>
-          {/* begin::Table head */}
+      
           <thead>
             <tr className='fw-bolder text-muted'>
               <th className='min-w-150px'>Product Name</th>
@@ -85,8 +85,6 @@ const ProductsList: React.FC = () => {
               <th className='min-w-100px text-end'>Actions</th>
             </tr>
           </thead>
-          {/* end::Table head */}
-          {/* begin::Table body */}
           <tbody>
             {loading ? (
               <ProductTableSkeleton columns={4} />
@@ -140,13 +138,10 @@ const ProductsList: React.FC = () => {
               ))
             )}
           </tbody>
-          {/* end::Table body */}
+         
         </table>
-        {/* end::Table */}
+   
       </div>
-      {/* end::Table container */}
-
-      {/* start: pagination */}
       <PaginationPerPage
         perPage={filters.perPage || 10}
         pageNo={filters.pageNo || 1}
@@ -154,8 +149,8 @@ const ProductsList: React.FC = () => {
         onPageChange={onPageChange}
         totalCount={filters.total || 0}
         dataLength={products.length || 0}
-      />
-      {/* end: pagination */}
+      /> */}
+
     </CustomCard>
   )
 }

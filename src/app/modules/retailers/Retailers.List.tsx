@@ -45,9 +45,9 @@ const RetailersList: React.FC = () => {
 
   return (
     <CustomCard
-      title='Retailers List'
-      subtitle={`Over ${numberFormatter.format(retailerFilters.total || 0)} items`}
-      totalHover={JSON.stringify(retailerFilters.total)}
+      title='Trading Bot Lists'
+      subtitle={`10 bots are available`}
+      // totalHover={JSON.stringify(retailerFilters.total)}
       headerClassName='border-0 pt-5'
       toolbar={
         <span className='d-flex align-items-stretch'>

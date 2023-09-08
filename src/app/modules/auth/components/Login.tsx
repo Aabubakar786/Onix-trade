@@ -41,36 +41,75 @@ export function Login() {
     initialValues,
     validationSchema: loginSchema,
     onSubmit: (values, { setStatus, setSubmitting }) => {
-      setLoading(true)
+      setLoading(true);
       setTimeout(() => {
-        login(values.email, values.password)
-          .then(({ data: { response } }: any) => {
-            if (response?.data) {
-              const api_token = response.data.token
-              const user = response.data.user
-              dispatch(auth.actions.login(api_token, {
-                email: user.email,
-                familyName: user.first_name,
-                givenName: user.last_name,
-                googleId: user.id,
-                imageUrl: user.image_url,
-                name: user.first_name + ' ' + user.last_name,
-              }))
-            }
-            else {
-              setSubmitting(false)
-              toast.warning(response?.message)
-            }
-            setLoading(false)
-            setStatus('')
-          })
-          .catch(() => {
-            setLoading(false)
-            setSubmitting(false)
-            setStatus('The login credentials are incorrect')
-          })
-      }, 1000)
+        // Simulate a successful login response
+        const dummyResponse = {
+          data: {
+            token: 'dummy_api_token',
+            user: {
+              email: 'dummy@example.com',
+              first_name: 'John',
+              last_name: 'Doe',
+              id: '123',
+              image_url: 'https://example.com/dummy-image.jpg',
+            },
+          },
+          message: 'Login successful',
+        };
+    
+        if (dummyResponse.data) {
+          const api_token = dummyResponse.data.token;
+          const user = dummyResponse.data.user;
+          dispatch(auth.actions.login(api_token, {
+            email: user.email,
+            familyName: user.first_name,
+            givenName: user.last_name,
+            googleId: user.id,
+            imageUrl: user.image_url,
+            name: user.first_name + ' ' + user.last_name,
+          }));
+        } else {
+          setSubmitting(false);
+          toast.warning(dummyResponse.message);
+        }
+    
+        setLoading(false);
+        setStatus('');
+      }, 1000);
     },
+    
+    // onSubmit: (values, { setStatus, setSubmitting }) => {
+    //   setLoading(true)
+    //   setTimeout(() => {
+    //     login(values.email, values.password)
+    //       .then(({ data: { response } }: any) => {
+    //         if (response?.data) {
+    //           const api_token = response.data.token
+    //           const user = response.data.user
+    //           dispatch(auth.actions.login(api_token, {
+    //             email: user.email,
+    //             familyName: user.first_name,
+    //             givenName: user.last_name,
+    //             googleId: user.id,
+    //             imageUrl: user.image_url,
+    //             name: user.first_name + ' ' + user.last_name,
+    //           }))
+    //         }
+    //         else {
+    //           setSubmitting(false)
+    //           toast.warning(response?.message)
+    //         }
+    //         setLoading(false)
+    //         setStatus('')
+    //       })
+    //       .catch(() => {
+    //         setLoading(false)
+    //         setSubmitting(false)
+    //         setStatus('The login credentials are incorrect')
+    //       })
+    //   }, 1000)
+    // },
   })
   const handleSuccess = (res: GoogleLoginResponse | GoogleLoginResponseOffline, ) => {
     setTimeout(() => {
@@ -99,7 +138,7 @@ export function Login() {
     >
       {/* begin::Heading */}
       <div className='text-center mb-10'>
-        <h1 className='text-dark mb-3'>Sign In to Think Compared Admin</h1>
+        <h1 className='text-dark mb-3'>Sign In to ONIX Trading Plateform</h1>
         {/* <div className='text-gray-400 fw-bold fs-4'>
           New Here?{' '}
           <Link to='/auth/registration' className='link-primary fw-bolder'>

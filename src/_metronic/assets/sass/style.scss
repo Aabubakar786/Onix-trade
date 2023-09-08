@@ -1,0 +1,28 @@
+//
+// Theme style
+//
+
+// Mode
+$mode: default;
+
+// Initialize
+@import "init";
+
+// Components
+@import "./core/components/components";
+@import "components/components";
+
+// Layout
+@import "layout/layout";
+@import "./core/layout/docs/layout";
+
+//plugins
+@import "plugins";
+@import "~react-loading-skeleton/dist/skeleton.css";
+@import "~react-toastify/dist/ReactToastify.min.css";
+@import "components/toastify";
+@import "global";
+@import "~react-date-range/dist/styles.css";
+@import "~react-date-range/dist/theme/default.css";
+@import "components/date-picker-global-styles";
+@import "components/product-create";

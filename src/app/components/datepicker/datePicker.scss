@@ -1,0 +1,31 @@
+@import '../../../_metronic/assets/sass/core/components/variables';
+.date-picker__toggle{
+  background: transparent;
+
+  border: none;
+  //border-color: $border-color;
+  &:after {
+    content: none;
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+  &:hover, &:active, &:focus{
+    background-color: transparent;
+    //color: $text-color !important;
+  }
+  .date-view{
+    margin: 0 10px;
+    cursor: pointer;
+  }
+}
+.show>.btn-primary.dropdown-toggle{
+  background-color: $white !important;
+  //color: $text-color !important;
+}
+.date-picker__apply-btn{
+  &:active{
+    background-color: $white !important;
+    color: initial;
+  }
+}

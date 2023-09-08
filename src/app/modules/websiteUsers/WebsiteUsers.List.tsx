@@ -55,26 +55,26 @@ const WebsiteUsers: React.FC = () => {
   }
   return (
     <CustomCard
-      title='Website Users List'
-      subtitle={`${numberFormatter.format(userFilters?.total || 0)} New User Added`}
-      totalHover={JSON.stringify(userFilters?.total)}
+      title='Profile and  Billing Area'
+      // subtitle={`${numberFormatter.format(userFilters?.total || 0)} New User Added`}
+      // totalHover={JSON.stringify(userFilters?.total)}
       headerClassName='border-0 pt-5'
-      toolbar={
-        <span className='d-flex align-items-stretch'>
-          <div className={clsx('d-flex align-items-stretch h-35px')}>
-            <WebsiteUsersFilters />
-          </div>
-          <div className={clsx('d-flex align-items-stretch')}>
-            <WebsiteUsersSearch />
-          </div>
-        </span>
-      }
+      // toolbar={
+      //   <span className='d-flex align-items-stretch'>
+      //     <div className={clsx('d-flex align-items-stretch h-35px')}>
+      //       <WebsiteUsersFilters />
+      //     </div>
+      //     <div className={clsx('d-flex align-items-stretch')}>
+      //       <WebsiteUsersSearch />
+      //     </div>
+      //   </span>
+      // }
     >
       {/* begin::Table container */}
-      <div className='table-responsive'>
-        {/* begin::Table */}
+      {/* <div className='table-responsive'>
+       
         <table className='table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4'>
-          {/* begin::Table head */}
+     
           <thead className='bg-light'>
             <tr className='fw-bolder text-muted'>
               <th className='min-w-150px ms-2'>User ID</th>
@@ -85,8 +85,6 @@ const WebsiteUsers: React.FC = () => {
               <th className='min-w-150px'>Actions</th>
             </tr>
           </thead>
-          {/* end::Table head */}
-          {/* begin::Table body */}
           <tbody>
             {loading ? (
               <ProductTableSkeleton columns={4} />
@@ -115,7 +113,7 @@ const WebsiteUsers: React.FC = () => {
                   </td>
                   <td className='text-muted'>
                     <span className='text-dark fw-bolder text-hover-primary fs-6 mw-200px text-truncate'>
-                      {/* <Link to={`/users/${user.id}`}>{user.first_name ?? ''} { user.last_name ?? ""}</Link> */}
+                   
                       {user.first_name ?? ''} { user.last_name ?? ""}
                     </span>
                   </td>
@@ -153,7 +151,7 @@ const WebsiteUsers: React.FC = () => {
         onPageChange={onPageChange}
         totalCount={userFilters?.total || 0}
         dataLength={users?.length}
-      />
+      /> */}
       {/* end: pagination */}
     </CustomCard>
   )

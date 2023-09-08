@@ -13,7 +13,7 @@ const Footer: FC = () => {
         {/* begin::Copyright */}
         <div className='text-dark order-2 order-md-1'>
           <a href='#' className='text-gray-800 text-hover-primary'>
-            Think Compared - COPYRIGHT © F10 SOFTWARE SOLUTIONS - ALL RIGHTS RESERVED  &copy; &nbsp;
+            ONIX TRADE - COPYRIGHT © xyz trading plateform - ALL RIGHTS RESERVED  &copy; &nbsp;
           </a>
           <span className='text-muted fw-bold me-2'>{new Date().getFullYear()} </span>
 

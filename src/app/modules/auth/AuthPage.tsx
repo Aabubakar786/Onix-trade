@@ -27,7 +27,7 @@ const AuthLayout = () => {
         <a href='#' className='mb-12'>
           <img
             alt='Logo'
-            src={toAbsoluteUrl('/media/logos/tc-logo-header.png')}
+            src={toAbsoluteUrl('/media/logos/onix-systems.svg')}
             className='h-45px'
           />
         </a>

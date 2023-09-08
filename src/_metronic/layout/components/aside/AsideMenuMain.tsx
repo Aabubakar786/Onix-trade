@@ -8,31 +8,31 @@ export function AsideMenuMain() {
       <AsideMenuItem
         to='/products'
         icon='/media/icons/duotune/ecommerce/ecm002.svg'
-        title='Products'
+        title='Dashboard'
         fontIcon='bi-app-indicator'
       />
       <AsideMenuItem
         to='/categories'
         icon='/media/icons/duotune/layouts/lay001.svg'
-        title='Categories'
+        title='Trading'
         fontIcon='bi-layers'
       />
       <AsideMenuItem
         to='/retailers'
         icon='/media/icons/duotune/general/gen008.svg'
-        title='Retailers'
+        title='Trading Bots'
         fontIcon='bi-layers'
       />
       <AsideMenuItem
         to='/scrappers'
         icon='/media/icons/duotune/general/gen008.svg'
-        title='Scrappers'
+        title='Trading Exchanges'
         fontIcon='bi-layers'
       />
       <AsideMenuItem
         to='/users'
         icon='/media/icons/duotune/general/gen019.svg'
-        title='Website Users'
+        title='Settings'
         fontIcon='bi-layers'
       />
       {/* <AsideMenuItem
